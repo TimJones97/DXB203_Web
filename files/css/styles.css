@@ -209,17 +209,11 @@ html {
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   margin: 0 auto;
   width: 100%;
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
-}
-
-.img-responsive {
-  display:block;
-  margin:auto;
 }
 
 /* -----------------------------------
