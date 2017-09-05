@@ -1,5 +1,3 @@
-
-
 /*-------------------------------------
 -----------PARALLAX BACKGROUNDS-------
 -------------------------------------*/
@@ -47,6 +45,7 @@
 .caption {
   position: fixed !important;
   top: -13%;
+  padding-top: 50vh;
   vertical-align: middle;
   height: 100%;
   width: 100%;
@@ -55,9 +54,10 @@
     bottom: 15%;
   font-family: 'Lato', sans-serif;
 }
-
 .caption > h1 {
   letter-spacing: 5px;
+  font-size: 55px;
+  line-height: 60px;
 }
 
 .caption > h3 {
@@ -89,7 +89,7 @@
 .review-card {
   background-color: #f3f3f3;
   border-radius: 15px;
-  padding: 10px 0px 10px 0px ;
+  padding: 10px 20px 10px 20px;
   margin-bottom: 10px;
   border: 1px solid #949494;
 }
@@ -111,8 +111,6 @@
   color: #F2682D;
 }
 
-
-
 /*-----------------------------
 --------RECIPE PAGE--------
 -------------------------------*/
@@ -122,12 +120,13 @@
   position: relative;
   padding-bottom: 30px;
   color: #3b3b3b; 
+  overflow-y: hidden;
   z-index: 11;
   font-family: 'Lato', sans-serif;
   text-align: center;
+  background: url('../img/wood_tile.png');
   padding-top: 80px;
 }
-
 .recipe-description, .review-block {
   height: 100%;
   width: 60%;
@@ -137,13 +136,17 @@
   font-family: 'Lato', sans-serif;
   text-align: left;
 }
-
+.ingredient-list {
+  text-align: left;
+  width: 20%;
+  margin: 0 auto;
+  list-style: none;
+}
 .recipe-description {
   padding: 0px 5% 2% 5%;
 }
-.recipe-description > h1 > a:-webkit-any-link {
-  text-decoration: none !important;
-  color: #3b3b3b;
+.recipe-description > ol > li {
+  margin-bottom: 20px; 
 }
 .recipe-image, .about-image {
   width: 550px;
@@ -156,10 +159,10 @@
 .recipe-difficulty {
   color: #F2682D;
 }
-
 .review {
   margin-bottom: 2%;
 }
+
 /*-----------------------------
 --------ABOUT PAGE--------
 -------------------------------*/
@@ -185,20 +188,6 @@
   color: #3b3b3b;
 }
 
-@media screen and ( min-width: 700px ) {
-    .caption {
-      padding-top: 50vh;
-    }
-}
-
-
-@media screen and (min-width: 800px) {
-    .caption > h1 {
-      font-size: 55px;
-      line-height: 60px;
-    }
-}
-
 body:before {
   content: " ";
   display: block;
@@ -215,23 +204,17 @@ body:before {
   background-size: cover;*/
 }
 
-body, .img-circle, .img-responsive, p, dd, h2, h3, h4, .text-center, .col-lg-4 {
-  transition:all 1s ease-in-out; 
-    -o-transition:all 1s ease-in-out; 
-    -moz-transition:all 1s ease-in-out; 
-    -webkit-transition:all 1s ease-in-out;
-}
-
 html {
     overflow-x: hidden;
 }
 
 body {
-    overflow-x: hidden;
-    margin: 0 auto;
-    width: 100%;
-    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-    -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
 }
 
 .img-responsive {
@@ -383,25 +366,26 @@ button {
 }
 textarea {
   background-color: #ffffff;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 10px 10px 10px;
   height: 130px;
-  width: 100%;
-  outline: none;
+  width: 80%;
   color: #726659;
   font-family: 'Lato', sans-serif;
   font-size: 15px;
   border-radius: 15px;
+  font-style: italic;
+  display: block;
   margin: 0 auto;
   resize: none;
   border: solid 1px #b3aca7;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+  transition: background 0.3s ease-in-out;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -ms-transition: background 0.3s ease-in-out;
 }
 textarea:hover {
-  background: #3B3B3B;
-  color: #fff;
+  font-style: normal;
 }
 /*<-----------------END FORM--------------->*/
 
@@ -416,10 +400,10 @@ textarea:hover {
   margin: 0 auto;
   text-align: center;
   letter-spacing: .1em;
-  transition:all 0.5s ease-in-out; 
-  -o-transition:all 0.5s ease-in-out; 
-  -moz-transition:all 0.5s ease-in-out; 
-  -webkit-transition:all 0.5s ease-in-out;
+  transition:background 0.5s ease-in-out; 
+  -o-transition:background 0.5s ease-in-out; 
+  -moz-transition:background 0.5s ease-in-out; 
+  -webkit-transition:background 0.5s ease-in-out;
   border: 1px solid #b3aca7;
   font-family: 'Lato', sans-serif;
   background: transparent;
@@ -436,8 +420,8 @@ textarea:hover {
   background-color: #3B3B3B; 
   border-color: #fff; 
   text-decoration: none;
-  transition:all 0.5s ease-in-out; 
-  -o-transition:all 0.5s ease-in-out; 
-  -moz-transition:all 0.5s ease-in-out; 
-  -webkit-transition:all 0.5s ease-in-out;
+  transition:background 0.5s ease-in-out; 
+  -o-transition:background 0.5s ease-in-out; 
+  -moz-transition:background 0.5s ease-in-out; 
+  -webkit-transition:background 0.5s ease-in-out;
 }
