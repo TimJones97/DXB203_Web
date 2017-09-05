@@ -1,0 +1,443 @@
+
+
+/*-------------------------------------
+-----------PARALLAX BACKGROUNDS-------
+-------------------------------------*/
+.landing-parallax {
+  position: relative;
+  margin: 0 auto;
+  background-position: center;
+  z-index: 0;
+  width: 100%;
+  background-repeat: no-repeat center center; 
+  background-attachment: fixed;
+  -webkit-box-shadow: inset 2px -5px 19px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 2px -5px 19px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 2px -5px 19px 0px rgba(0,0,0,0.75);
+  -webkit-backface-visibility: hidden;
+}
+
+.landing-parallax {
+  /*Royalty free, obtained from:
+    https://www.pexels.com/photo/white-ceramic-round-plate-on-round-brown-ornament-24859/*/
+  background-image: url(../img/pavlova.jpg);
+  height: 100vh;
+}
+
+/*-----------------------------------
+-------------FRONT-PAGE-------------
+------------------------------------*/
+.center {
+  text-align: center;
+}
+
+.cake-img {
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+}
+.caption-block {
+  position: fixed !important;
+  background-color:rgba(0,0,0,0.5);
+  height: 100%;
+  font-family: 'Lato', sans-serif; 
+  z-index: 1;
+  width: 100%;
+}
+.caption {
+  position: fixed !important;
+  top: -13%;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+    bottom: 15%;
+  font-family: 'Lato', sans-serif;
+}
+
+.caption > h1 {
+  letter-spacing: 5px;
+}
+
+.caption > h3 {
+  letter-spacing: 2px;
+}
+
+.caption > h4 {
+  margin-top: 60px;
+}
+
+/*--------------------------
+--------REVIEWS--------
+--------------------------*/
+
+.star-rating {
+  width: 25px;
+  height: 25px;
+}
+.result {
+  margin-left: 10%;
+  margin-top: 5%;
+  padding: 2%;
+  border: 1px solid #3b3b3b;
+  border-radius: 9px;
+  background: #F2F2F2;
+  width: 100%;
+}
+
+.review-card {
+  background-color: #f3f3f3;
+  border-radius: 15px;
+  padding: 10px 0px 10px 0px ;
+  margin-bottom: 10px;
+  border: 1px solid #949494;
+}
+/*Provide some spacing after the name of the reviewer and their rating*/
+.review > i {
+  margin-right: 5px;
+}
+/*----Star rating of review---*/
+.rating {
+  margin-bottom: 20px;
+}
+
+.rating > p {
+ margin-top: 5px;
+}
+
+.difficulty {
+  padding-top: 14%;
+  color: #F2682D;
+}
+
+
+
+/*-----------------------------
+--------RECIPE PAGE--------
+-------------------------------*/
+.recipe-block, .about-block {
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 30px;
+  color: #3b3b3b; 
+  z-index: 11;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.recipe-description, .review-block {
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  color: #3b3b3b; 
+  z-index: 11;
+  font-family: 'Lato', sans-serif;
+  text-align: left;
+}
+
+.recipe-description {
+  padding: 0px 5% 2% 5%;
+}
+.recipe-description > h1 > a:-webkit-any-link {
+  text-decoration: none !important;
+  color: #3b3b3b;
+}
+.recipe-image, .about-image {
+  width: 550px;
+  height: 366px;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
+}
+.recipe-difficulty {
+  color: #F2682D;
+}
+
+.review {
+  margin-bottom: 2%;
+}
+/*-----------------------------
+--------ABOUT PAGE--------
+-------------------------------*/
+.right, .left {
+  float: left;
+  width: 25%;
+  padding: 0px 2.5% 0px 2.5%;
+  word-wrap: break-word;
+}
+.left {
+  margin-left: 20%;
+}
+.right {
+  margin-right: 20%;
+}
+.about-block {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.source-link {
+  text-decoration: underline;
+  color: #3b3b3b;
+}
+
+@media screen and ( min-width: 700px ) {
+    .caption {
+      padding-top: 50vh;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .caption > h1 {
+      font-size: 55px;
+      line-height: 60px;
+    }
+}
+
+body:before {
+  content: " ";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: auto;
+  background: #ffffff;
+/*-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
+body, .img-circle, .img-responsive, p, dd, h2, h3, h4, .text-center, .col-lg-4 {
+  transition:all 1s ease-in-out; 
+    -o-transition:all 1s ease-in-out; 
+    -moz-transition:all 1s ease-in-out; 
+    -webkit-transition:all 1s ease-in-out;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0 auto;
+    width: 100%;
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+}
+
+.img-responsive {
+  display:block;
+  margin:auto;
+}
+
+/* -----------------------------------
+--------------------Navbar -----------
+--------------------------------------
+*/
+.nav, .nav-home {
+  font-family: 'Lato', sans-serif;
+  z-index: 99;
+  width: 100vw;
+  position: fixed;
+  padding: 0;
+  top: -10px;
+  border: 0px;
+  border-color: transparent;
+  -webkit-transition: all .7s;
+   -moz-transition: all .7s;
+  transition: all .7s;
+  /*Use rgba to make background opacity of navbar 
+    transparent but not <li> or <a> elements*/
+   background-color: rgba(9, 23, 56, 0.9);
+}
+.nav ul,
+.nav-home ul {
+   list-style: none;
+   text-align: center;
+}
+
+.nav ul li,
+.nav-home ul li {
+   display: inline-block;
+}
+
+.active {
+  border-top: 12px solid #37C9FA;
+  background-color: transparent;
+}
+.nav-home {
+  background-color: transparent;
+}
+
+.nav > ul> li > a,
+.nav-home > ul> li > a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 30px 30px;
+  text-decoration: none;
+}
+
+.nav > ul,
+.nav-home > ul
+{
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav > li > a,
+.nav-home > li > a {
+  font-size: 16px;
+  line-height: 5vh;
+  color: #ffffff;
+}
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav-home > li > a:hover,
+.nav-home > li > a:focus {
+  color: #F2682D;
+  background-color: transparent;
+  margin-top: 2px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.nav > .active > a,
+.nav > .active > a:hover,
+.nav > .active > a:focus, 
+.nav-home > .active > a,
+.nav-home > .active > a:hover,
+.nav-home > .active > a:focus {
+  -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: 0px;
+  color: #ffffff;
+}
+
+/*-----------------------------------
+---------------- FOOTER --------------
+------------------------------------- */
+.footer {
+  color: #E3E3E3;
+  background-color: #000a21; 
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  z-index: 12;
+  -webkit-box-shadow: 0px 4px 64px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 64px -7px rgba(0,0,0,0.75);
+  box-shadow: 0px 4px 64px -7px rgba(0,0,0,0.75);
+}
+
+
+/*----------------------------
+-------------SITEMAP----------
+------------------------------*/
+.links > li > a,
+.links > span > a,
+.links > a, .links,
+.links:visited{
+  text-decoration: none;
+  color: #E3E3E3;
+  float: left;
+  line-height: 10px;
+}
+
+.links > p > a {
+  text-decoration: none !important;
+  color: #E3E3E3;
+}
+.sitemap-text {
+  float: left;
+  margin-left: 10%;
+  line-height: 30px;
+}
+.sitemap-text > a {
+  margin-bottom: 9px;
+}
+
+.contact {
+  width: 30%;
+  float: right;
+  line-height: 24px;
+  margin-left: 20%;
+}
+
+button {
+  font-family: 'Lato', sans-serif;
+}
+textarea {
+  background-color: #ffffff;
+  padding: 10px 0px 10px 0px;
+  height: 130px;
+  width: 100%;
+  outline: none;
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  border-radius: 15px;
+  margin: 0 auto;
+  resize: none;
+  border: solid 1px #b3aca7;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+textarea:hover {
+  background: #3B3B3B;
+  color: #fff;
+}
+/*<-----------------END FORM--------------->*/
+
+/*---------------------------
+-------------BUTTONS---------
+----------------------------*/
+
+.submit-btn {
+  display: block;
+  text-decoration: none;
+  border-radius: 50px;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: .1em;
+  transition:all 0.5s ease-in-out; 
+  -o-transition:all 0.5s ease-in-out; 
+  -moz-transition:all 0.5s ease-in-out; 
+  -webkit-transition:all 0.5s ease-in-out;
+  border: 1px solid #b3aca7;
+  font-family: 'Lato', sans-serif;
+  background: transparent;
+  font-size: 15px;
+  color: #3B3B3B;
+  background-color: #fff; 
+  padding: 10px 20px 10px 20px;
+}
+
+.submit-btn:hover, 
+.submit-btn:focus, 
+.submit-btn:active {
+  color: #fff; 
+  background-color: #3B3B3B; 
+  border-color: #fff; 
+  text-decoration: none;
+  transition:all 0.5s ease-in-out; 
+  -o-transition:all 0.5s ease-in-out; 
+  -moz-transition:all 0.5s ease-in-out; 
+  -webkit-transition:all 0.5s ease-in-out;
+}
