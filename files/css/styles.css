@@ -130,11 +130,10 @@
   overflow-y: hidden;
   z-index: 11;
   font-family: 'Lato', sans-serif;
-  text-align: center;
   background: url('../img/wood_tile.png');
-  -webkit-box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.5);
 }
 .recipe-description, .review-block {
   height: 100%;
@@ -166,7 +165,7 @@
   display: block;
 }
 
-/*Second image underneath the Method*/
+/* Second image underneath the Method */
 .recipe-image-two {
   width: 550px;
   height: 366px;
@@ -176,7 +175,7 @@
   display: block;
 }
 
-/*Top title on Pavlova Recipe and About pages*/
+/* Top title on Pavlova Recipe and About pages */
 .recipe-header, .about-header {
   top: 28vh;
   width: 100vw;
@@ -200,14 +199,14 @@
 ------------ABOUT PAGE----------
 -------------------------------*/
 
-/*Make two columns for better readability*/
+/* Create two columns for better readability */
 .right, .left {
   float: left;
   width: 25%;
   padding: 0px 2.5% 0px 2.5%;
   word-wrap: break-word;
 }
-/*Make sure the columns are closer to the center of the screen*/
+/* Push columns to center of the screen */
 .left {
   margin-left: 20%;
 }
@@ -220,57 +219,62 @@
   color: #3b3b3b;
 }
 
+.about-block{
+  text-align: left;
+}
 /*---------General Global Styling-----------*/
 
 /*Make sure the page doesn't allow horizontal scrolling
- from accidental overflow*/
+ from any overflow*/
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
+
 body {
-  overflow: hidden;
-  margin: 0 auto;
+  margin: 0 auto; /* Automatically center the body on screen */
+  font-size: 17px; /* Bump up font size to fix font abonomalities on low DPI screens */
   width: 100%;
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
 }
 
-/* -----------------------------------
---------------------Navbar -----------
---------------------------------------
+/* --------------------------------------
+--------------------Navbar-----------------
+------------------------------------------
 */
 .nav, .nav-home {
   font-family: 'Lato', sans-serif;
   z-index: 99;
   width: 100vw;
-  position: fixed;
-  padding: 0;
-  top: -10px;
-  border: 0px;
-  border-color: transparent;
+  position: fixed; /* Make sure Navbar sticks to the top of the page while scrolling */
   -webkit-transition: all .7s;
    -moz-transition: all .7s;
   transition: all .7s;
   /*Use rgba to make background opacity of navbar 
     transparent but not <li> or <a> elements*/
-   background-color: rgba(9, 23, 56, 0.9);
+  background-color: rgba(9, 23, 56, 0.9);
 }
+/* Displays the menu as a centered list, but without the dots */
 .nav ul,
 .nav-home ul {
-   list-style: none;
-   text-align: center;
+  list-style: none;
+  text-align: center;
 }
 
+/* Display elements horizontally instead of vertically */
 .nav ul li,
 .nav-home ul li {
    display: inline-block;
 }
 
+/* Add a small indicator to the top of the current page menu element */
 .active {
-  border-top: 12px solid #37C9FA;
+  border-top: 2px solid #37C9FA;
   background-color: transparent;
 }
+
+/* Make home page visually appealing with a transparent Navbar */
 .nav-home {
   background-color: transparent;
 }
@@ -297,31 +301,25 @@ body {
 .nav > li > a,
 .nav-home > li > a {
   font-size: 16px;
-  line-height: 5vh;
+  line-height: 50px;
   color: #ffffff;
 }
-.nav > li > a:hover,
-.nav > li > a:focus,
-.nav-home > li > a:hover,
-.nav-home > li > a:focus {
-  color: #F2682D;
+
+/* Add light blue hover effect to the Nav elements */
+.nav > ul > li > a:hover,
+.nav > ul > li > a:focus,
+.nav-home > ul > li > a:hover,
+.nav-home > ul > li > a:focus,
+.nav > ul > .active > a:hover,
+.nav > ul > .active > a:focus, 
+.nav-home > ul > .active > a:hover,
+.nav-home > ul > .active > a:focus {
+  color: #37C9FA;
   background-color: transparent;
-  margin-top: 2px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
-.nav > .active > a,
-.nav > .active > a:hover,
-.nav > .active > a:focus, 
-.nav-home > .active > a,
-.nav-home > .active > a:hover,
-.nav-home > .active > a:focus {
-  -webkit-transition: all 0.3s;
-   -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  margin-top: 0px;
-  color: #ffffff;
-}
+
 
 /*-----------------------------------
 ---------------- FOOTER --------------
@@ -345,6 +343,8 @@ body {
 /*----------------------------
 -------------SITEMAP----------
 ------------------------------*/
+
+/* Remove blue text colour and underline from <a> elements with this class applied */
 .links > li > a,
 .links > span > a,
 .links > a, .links,
@@ -359,11 +359,13 @@ body {
   text-decoration: none !important;
   color: #E3E3E3;
 }
+
 .sitemap-text {
   float: left;
   margin-left: 10%;
   line-height: 30px;
 }
+
 .sitemap-text > a {
   margin-bottom: 9px;
 }
