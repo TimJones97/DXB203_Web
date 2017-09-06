@@ -92,7 +92,7 @@
 
 .review-card {
   background-color: #f3f3f3;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 10px 20px 10px 20px;
   margin-bottom: 10px;
   border: 1px solid #949494;
@@ -125,13 +125,16 @@
   height: 100%;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 30px;
   color: #3b3b3b; 
+  padding: 0px 12% 30px 12%;
   overflow-y: hidden;
   z-index: 11;
   font-family: 'Lato', sans-serif;
   text-align: center;
   background: url('../img/wood_tile.png');
+  -webkit-box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.75);
 }
 .recipe-description, .review-block {
   height: 100%;
@@ -151,7 +154,8 @@
 .recipe-description {
   padding: 0px 5% 2% 5%;
 }
-.recipe-description > ol > li {
+.recipe-description > ol > li,
+.recipe-description > ul > li {
   margin-bottom: 20px; 
 }
 .recipe-image, .about-image {
@@ -166,7 +170,7 @@
 .recipe-image-two {
   width: 550px;
   height: 366px;
-  border-radius: 15px;
+  border-radius: 5px;
   margin: 0 auto;
   margin-top: 50px;
   display: block;
@@ -382,17 +386,13 @@ textarea {
   color: #726659;
   font-family: 'Lato', sans-serif;
   font-size: 15px;
-  border-radius: 15px;
+  border-radius: 5px;
   font-style: italic;
   display: block;
   margin: 0 auto;
   resize: none;
   border: solid 1px #b3aca7;
   margin-bottom: 10px;
-  transition: background 0.3s ease-in-out;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  -ms-transition: background 0.3s ease-in-out;
 }
 textarea:hover {
   font-style: normal;
