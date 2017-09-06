@@ -1,18 +1,13 @@
 /*-------------------------------------
 -----------PARALLAX BACKGROUNDS-------
 -------------------------------------*/
-.landing-parallax {
+.landing-parallax, .recipe-parallax, .about-parallax {
   position: relative;
   margin: 0 auto;
   background-position: center;
   z-index: 0;
   width: 100%;
-  background-repeat: no-repeat center center; 
   background-attachment: fixed;
-  -webkit-box-shadow: inset 2px -5px 19px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 2px -5px 19px 0px rgba(0,0,0,0.75);
-  box-shadow: inset 2px -5px 19px 0px rgba(0,0,0,0.75);
-  -webkit-backface-visibility: hidden;
 }
 
 .landing-parallax {
@@ -20,6 +15,15 @@
     https://www.pexels.com/photo/white-ceramic-round-plate-on-round-brown-ornament-24859/*/
   background-image: url(../img/pavlova.jpg);
   height: 100vh;
+}
+
+.recipe-parallax {
+  background-image: url(../img/making-pavlova.jpeg);
+  height: 60vh;
+}
+.about-parallax {
+  background-image: url(../img/pavlova-complete.jpg);
+  height: 60vh;
 }
 
 /*-----------------------------------
@@ -36,7 +40,7 @@
 }
 .caption-block {
   position: fixed !important;
-  background-color:rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.5);
   height: 100%;
   font-family: 'Lato', sans-serif; 
   z-index: 1;
@@ -125,14 +129,13 @@
   font-family: 'Lato', sans-serif;
   text-align: center;
   background: url('../img/wood_tile.png');
-  padding-top: 80px;
 }
 .recipe-description, .review-block {
   height: 100%;
   width: 60%;
   margin: 0 auto;
   color: #3b3b3b; 
-  z-index: 11;
+  z-index: 12;
   font-family: 'Lato', sans-serif;
   text-align: left;
 }
@@ -149,12 +152,34 @@
   margin-bottom: 20px; 
 }
 .recipe-image, .about-image {
+  width: 100vw;
+  height: auto;
+  margin-top: -40%;
+  position: relative;
+  display: block;
+}
+.recipe-image-two {
   width: 550px;
   height: 366px;
   border-radius: 15px;
   margin: 0 auto;
   margin-top: 50px;
   display: block;
+}
+.recipe-header, .about-header {
+  top: 27vh;
+  width: 100vw;
+  line-height: 60vh;
+  font-size: 45px;
+  letter-spacing: 5px;
+  font-size: 55px;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  z-index: 0;
+  position: fixed;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 .recipe-difficulty {
   color: #F2682D;
