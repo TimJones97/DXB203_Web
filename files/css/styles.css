@@ -58,6 +58,8 @@
     bottom: 15%;
   font-family: 'Lato', sans-serif;
 }
+
+
 .caption > h1 {
   letter-spacing: 5px;
   font-size: 55px;
@@ -130,24 +132,32 @@
   overflow-y: hidden;
   z-index: 11;
   font-family: 'Lato', sans-serif;
-  background: url('../img/wood_tile.png');
+  background: url('../img/snow_tile.png');
   -webkit-box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.5);
   box-shadow: 0px -5px 22px 0px rgba(0,0,0,0.5);
 }
-.recipe-description, .review-block {
+.recipe-description, .review-block, .about-description {
   height: 100%;
   width: 60%;
   margin: 0 auto;
+  padding-bottom: 30px;
   color: #3b3b3b; 
   z-index: 12;
   font-family: 'Lato', sans-serif;
   text-align: left;
 }
+
+.recipe-description > h2, 
+.review-block> h2, 
+.about-description > h2{
+  margin-top: 30px;
+}
 .ingredient-list {
   text-align: left;
   width: 20%;
   margin: 0 auto;
+  margin-bottom: 60px;
   list-style: none;
 }
 .recipe-description {
@@ -171,13 +181,14 @@
   height: 366px;
   border-radius: 5px;
   margin: 0 auto;
+  margin-bottom: 60px;
   margin-top: 50px;
   display: block;
 }
 
 /* Top title on Pavlova Recipe and About pages */
 .recipe-header, .about-header {
-  top: 30vh;
+  top: 34vh;
   width: 100vw;
   line-height: 60vh;
   letter-spacing: 5px;
@@ -192,6 +203,7 @@
   transform: translate(-50%, -50%);
 }
 .recipe-difficulty {
+  padding-top: 30px;
   color: #F2682D;
 }
 
@@ -219,6 +231,37 @@
   color: #3b3b3b;
 }
 
+.origins-img {
+  margin: 0 auto;
+  display: block;
+  width: 159px; 
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.pull-quote {
+  font-family: 'Lato', sans-serif;
+  margin: 0 auto;
+  font-size: 25px !important;
+  margin-bottom: 30px;
+  line-height: 50px;
+  width: 80%;
+}
+
+.pull-quote:before {
+  content: "“";
+  color: #37C9FA;
+  padding-right: 10px;
+  line-height: 20px;
+  font-size: 50px;
+}
+.pull-quote:after {
+  line-height: 20px;
+  content: "”";
+  color: #37C9FA;
+  padding-left: 10px;
+  font-size: 50px;
+}
 .about-block{
   text-align: left;
 }
@@ -230,7 +273,10 @@ html {
   overflow-x: hidden;
 }
 
-
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+}
 body {
   margin: 0 auto; /* Automatically center the body on screen */
   font-size: 17px; /* Bump up font size to fix font abonomalities on low DPI screens */
@@ -380,10 +426,9 @@ body {
 button {
   font-family: 'Lato', sans-serif;
 }
-textarea {
-  background-color: #ffffff;
+textarea, input {
+  background-color: #f3f3f3;
   padding: 10px 10px 10px 10px;
-  height: 130px;
   width: 80%;
   color: #726659;
   font-family: 'Lato', sans-serif;
@@ -396,10 +441,33 @@ textarea {
   border: solid 1px #b3aca7;
   margin-bottom: 10px;
 }
-textarea:hover {
-  font-style: normal;
+
+textarea {
+  height: 130px;
 }
 
+input {
+  height: 100%;
+  margin-top: 60px;
+}
+textarea:hover, input:hover {
+  font-style: normal;
+}
+select {
+  font-family: "Lato", sans-serif;
+  outline: 0;
+  background: #f3f3f3;
+  width: 150px;
+  display: block;
+  border: 1px solid #b3aca7;
+  border-radius: 5px;
+  color: #3b3b3b;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 /*---------------------------
 -------------BUTTONS---------
 ----------------------------*/
@@ -409,6 +477,8 @@ textarea:hover {
   text-decoration: none;
   border-radius: 50px;
   margin: 0 auto;
+  margin-top: 10px;
+  width: 150px;
   text-align: center;
   letter-spacing: .1em;
   transition:background 0.5s ease-in-out; 
@@ -420,6 +490,7 @@ textarea:hover {
   background: transparent;
   font-size: 15px;
   color: #3B3B3B;
+  font-style: normal;
   background-color: #fff; 
   padding: 10px 20px 10px 20px;
 }
