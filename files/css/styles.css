@@ -5,14 +5,13 @@
   position: relative;
   margin: 0 auto;
   background-position: center;
+  background-size: cover; 
   z-index: 0;
   width: 100%;
   background-attachment: fixed;
 }
 
 .landing-parallax {
-  /*Royalty free, obtained from:
-    https://www.pexels.com/photo/white-ceramic-round-plate-on-round-brown-ornament-24859/*/
   background-image: url(../img/pavlova.jpg);
   height: 100vh;
 }
